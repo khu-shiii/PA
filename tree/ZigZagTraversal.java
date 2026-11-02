@@ -43,3 +43,51 @@ class Solution {
         return ans;
     }
 }
+
+
+/* Structure of Binary Tree Node
+class Node {
+    int data;
+    Node left, right;
+    Node(int d)
+    {
+        data = d;
+        left = right = null;
+    }
+}*/
+
+class Solution {
+    ArrayList<Integer> zigZagTraversal(Node root) {
+        // code here
+        ArrayList<Integer> list=new ArrayList<>();
+        if(root==null)return list;
+        Queue<Node> q=new LinkedList<>();
+        q.add(root);
+        boolean leftToRight=true;
+        while(!q.isEmpty()){
+            
+            int size=q.size();
+            ArrayList<Integer> l=new ArrayList<>();
+            
+            for(int i=0;i<size;i++){
+                Node curr=q.poll();
+                l.add(curr.data);
+                
+                if(curr.left!=null){
+                    q.add(curr.left);
+                }
+                if(curr.right!=null){
+                    q.add(curr.right);
+                }
+            }
+            
+            if(!leftToRight){
+                Collections.reverse(l);
+            }
+            list.addAll(l);
+            leftToRight=!leftToRight;
+        }
+        return list;
+        
+    }
+}

@@ -1,0 +1,25 @@
+Heap is a complete binary tree thay follows a special property called the heap property.
+1. Binary Tree - a tree in which every node can have atmost two children.
+2. Complete BT - a binary tree in which:
+                 every level is completely filled except possibly the last level.
+                 the last level is filled from left to right.
+
+Heaps follows two conditions:
+1. it must be complete binary tree
+2. it must follow the heap property
+
+There are two types of heap:
+1. Max Heap: in max heap, the parent node is always greater than or equal to its children.
+2. Min Heap: in min heap, the parent node is always less than or equal to its children.
+
+Difference between min heap and max heap
+  __________________________________________________________
+ |Feature                 Max heap             Min heap     |
+  ----------------------------------------------------------
+ |Root                     Max                   Min        |
+ |Parent                  Greater               Smaller     |
+ |Usage               Largest element        Smaller element|
+ |Java        Priority Queue reverse order    Priority Queue|
+ ------------------------------------------------------------
+
+
